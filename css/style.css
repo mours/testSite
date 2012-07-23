@@ -1,0 +1,856 @@
+/*
+Theme Name: Medieval Book
+Theme URI: http://www.thepimppanther.com/
+Description: This Wordpress theme is not just any other theme. Carefully built in the spirit of the medieval Illuminated Manuscripts, the theme truly resembles an ancient book.
+
+The header's position was moved above the sidebar to reinforce the book look-a-like of the "Medieval Book" theme. The image used in the header is a reproduction of a medieval image named "Cleric, Knight and Workman" representing the three classes.
+This image was originally published/produced in France, late 13th century.
+
+Combining old with new, Medieval Book uses an automated function and a bit of CSS to embelish the first letter of every post, turning it into an illuminated letter.
+Version: 1.1
+Author: V
+Author URI: http://www.thepimppanther.com/
+Tags: brown, 3 columns, fixed width, widget ready.
+
+
+/*============================================================
+	General Specifications
+==============================================================*/
+
+body {
+	background: #3d1402;
+	width:100%;
+  	font-size: 16px;
+	font-family: 'Palatino Linotype', Georgia, Verdana, Arial, Sans-Serif;
+	color: #3d0c0b;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+#page {
+	/*background: url(images/.png) top repeat-y;*/
+	text-align: left;
+	margin: 0px auto;
+	width: 1000px;
+	}
+
+
+.depth-1 {
+	border: 1px solid #ddd;
+    	}
+
+.even, .alt {
+	border-left: 1px solid #638e3c;
+    	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 10px;
+	line-height: 15px;
+	}
+
+h1 {
+	font-size:48px;
+	font-stretch: ultra-condensed;
+	letter-spacing: -4px;
+	font-style: oblique;
+	color:#7e4017;
+	text-decoration:none;
+	}
+
+h1 a, a:hover, a:visited {
+  	text-decoration: none !important;
+	}
+
+h2.pagetitle {
+    	font-size: 20px;
+	margin-top: 30px;
+	text-align: center;
+	}
+
+h2 {
+	font-size: 36px;
+    	margin: 10px 0 0;
+	font-stretch: ultra-condensed;
+	letter-spacing: -2px;
+	font-style: oblique;
+	}
+
+h2, h3 {
+	font-family: 'Palatino Linotype', Georgia, 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	color: #804b21; 
+	}
+
+h3 {
+	font-size: 26px;
+    	padding: 0;
+	margin: 30px 0 0;
+	margin: 10px 0 0;
+	font-stretch: ultra-condensed;
+	letter-spacing: -2px;
+	font-style: oblique;
+	}
+
+h5 {	
+	font-size:20px;
+	color:#804b21;
+	font-stretch: ultra-condensed;
+	letter-spacing: -1px;
+	font-style: oblique;
+	}
+
+.entry p a:visited {
+	color: #aa0004 !important;
+	}
+
+code {
+	font: 12px 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps {
+	font-size: 10px;
+    	cursor: help;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #aa0004;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #aa0004;
+	text-decoration: underline;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #323f5e;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+.hidden {
+	display: none;
+	}
+
+hr {
+	display: none;
+	}
+
+.navigation {
+  	display: block;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 10px;
+    	font-weight: bold;
+    	}
+
+#searchform {
+    	width:200px;
+	height:15px;
+	background: #f6f1e4;
+	color: #7d633e;
+	font-size: 13px;
+	font-family: Georgia, Times New Roman, Trebuchet MS;
+    	font-weight: normal !important;
+	text-align: center;
+	margin: 5px 0px 0px 5px;
+	padding: 2px 4px 1px 4px;
+	font-weight: bold;
+	}
+
+#submit {
+	background: #f6f1e4;
+	color: #7d633e;
+	font-size: 12px;
+	font-family: Georgia, Times New Roman, Trebuchet MS;
+	margin: 0px 0px 0px 5px;
+	padding: 2px 4px 1px 4px;
+	font-weight: bold;
+    	}
+
+#searchh {
+    	width:180px;
+	height:15px;
+	background: none;
+	color: #7d633e;
+	font-size: 13px;
+	font-family: Georgia, Times New Roman, Trebuchet MS;
+    	font-weight: normal !important;
+	text-align: center;
+	margin: 5px 0px 0px 5px;
+	padding: 2px 4px 1px 4px;
+	border: none !important;
+	}
+
+#submith {
+	background: url(images/src.gif) top no-repeat;
+	width: 34px;
+	height: 27px;
+	border: none !important;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+/*==========================================================
+	Header
+============================================================*/
+
+.srch {
+	float:right;
+	margin-top: -5px;
+	}
+
+
+#header {
+	background: url(images/header.jpg) bottom no-repeat;
+	margin-left:auto;
+	margin-right: auto;
+	padding: 0;
+	height: 250px;
+	width: 1000px;
+	}
+
+.feed {
+	background: url(images/rss.png) top left no-repeat;
+	width: 250px;
+	float: left;
+	}
+
+#description {
+	width: 700px;
+	text-align: left;
+	position: relative;
+	top:100px;
+	left: -200px;
+	}
+
+
+/*===================================================================
+	Menu bar 
+=====================================================================*/
+	
+#menu_bar {
+	width:700px;
+	height:30px;
+	padding-top: 10px;
+	float: left;
+	font-size:16px;
+	font-weight:bold;
+	margin-left: 10px;
+	text-transform: uppercase;
+	}
+
+ul#navlist {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	float:left;
+	width:100%;
+	}
+
+ul#navlist li {
+	display:inline;
+	list-style-type: none;
+	}
+
+ul#navlist li a {
+	font-size: 18px;
+    	font-stretch: ultra-condensed;
+	letter-spacing: -1px;
+	font-style: oblique;
+	text-align:center;
+	color: #e8c99a;
+	margin:0px;
+	margin-right:2px;
+	padding:5px;
+	display:block;
+	float:left;
+	text-decoration: none;
+	}
+
+ul#navlist li a:hover {
+	color: #c1853c;
+	}
+
+/*=====================================================================
+	Blog page
+=======================================================================*/
+
+#pbody {
+	min-height: 500px;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: -80px;
+	background: url(images/page.jpg) top repeat-y;
+	}
+
+
+.arch {
+    	text-align: center;
+	margin: 0 auto;
+    	width: 460px;
+    	font-size: 18px;
+	font-style: oblique;
+	font-stretch: ultra-condensed;
+	}
+
+
+/*==========================================================================
+	The actual Blog post look
+============================================================================*/
+
+.post {
+	width:440px;
+	float: left;
+	padding-left: 20px;
+	padding-right: 40px;
+	margin: 0;
+	text-align: justify;
+	}
+
+span.initialcap {
+	width: 150px;
+	height: 83px;
+	background: url(images/letter.png) bottom no-repeat;
+    	float: left; 
+	font-family: 'Monotype Corsiva';
+    	font-size: 86px;
+	color: #c26635; 
+	line-height: 35px;
+    	padding-top: 45px;
+	margin-right: -5px;
+	text-align: center;
+	}
+
+
+.entry {
+	width:430px;
+	float:left;
+	margin-left:10px;
+	overflow: hidden;
+	}
+
+.post hr {
+	display: block;
+	}
+
+.smallattachment {
+	text-align: center;
+	float: left;
+	width: 128px;
+	margin: 5px 5px 5px 0px;
+	}
+
+.attachment {
+	text-align: center;
+	margin: 5px 0px;
+	}
+
+.ptitle{
+	width: 430px;
+	float: left;
+	text-align: center;
+	}
+
+.postmetadata {
+	float: left;
+    	font-size: 14px;
+	font-weight: normal;
+	font-style: oblique;
+    	padding-left: 20px;
+	width:420px;
+    	clear: both;
+	}
+
+.clear {
+	clear: both;
+	}
+
+.entry ul {
+	margin-left: 0px;
+	list-style: square;
+	padding-left: 10px;
+	text-indent: 5px;
+	}
+
+.entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+
+/*===================================================
+	Sidebars
+=====================================================*/
+
+/* Main Sidebar */
+
+#sidebar{
+	background: url(images/knight.jpg) top right no-repeat;
+	float:left;
+	width: 440px;
+	margin-top: -50px;
+	margin-left: 25px;
+	margin-right: 5px;
+	font-size: 16px;
+	padding: 410px 0 10px 0;
+	}
+
+#sidebar h2 {
+	color: #804b21;
+	margin: 5px auto;
+	font-size:24px;
+	text-align:center;
+	font-stretch: ultra-condensed;
+	}
+
+#sidebar a, a:visited {
+	color:#3d0c0b;
+	}
+
+#sidebar a:hover {
+	color:#aa0004;
+	text-decoration:none;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding:0px;
+	}
+
+#sidebar ul li li {
+	padding: 0px 0px 5px 20px;
+	margin: 0px;
+	} 
+
+#sidebar ul li ul li {
+	padding: 0px 0px 5px 10px;
+	margin: 0px;
+	}
+
+/* Sidebar left */
+
+#sidebar1{
+    	float:left;
+	width: 210px;
+	margin-top: 10px;
+	margin-left: 10px;
+   	margin-right:5px;
+    	padding: 0px 0 10px 0;
+    	display: inline;
+	}
+
+/* Sidebar right */
+
+#sidebar2{
+	float:left;
+	width: 210px;
+	margin-top: 10px;
+	margin-right: 5px;
+	padding: 0px 0 10px 0;
+    	display:inline;
+    	}
+
+
+/*Sidebar search form*/
+
+#sidebar #searchform #s {
+	width: 108px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+/* Calendar */
+
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar #prev a, #wp-calendar #next a {
+	font-size: 12px;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font-size: 18px;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+
+
+/*================================================================
+    Begin Comments
+==================================================================*/
+
+#reply {
+	width:580px;
+	height: 50px;
+	margin: 10px auto 20px ;
+	}
+
+#quil { 
+	width: 380px;
+	margin-left:60px;
+	float: left;
+	padding-bottom: 10px;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 10px auto 20px ;
+	}
+
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+#commentform input {
+    	background: #f7ede1;
+	color: #323f5e;
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform {
+    	margin: 5px 10px 0 0;
+	}
+
+#commentform textarea {
+    	background: #f7ede1 url(images/quil.png) bottom right no-repeat;
+	color: #323f5e;
+	width: 380px;
+	padding: 2px;
+	}
+
+#respond:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	}
+
+#commentform #submit {
+	background:#804b21;
+	color: #f7ede1;
+	font-size: 10px;
+	cursor: pointer;
+	width: 120px;
+	margin: 0 0 5px auto;
+	float: left;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 10px;
+	padding: 5px 5px 10px 10px;
+	list-style: none;
+    	font-weight: bold;
+	}
+
+.commentlist li ul li {
+	margin-right: -5px;
+	margin-left: 10px;
+    	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font-size: 14px;
+	}
+
+.commentlist li ul li {
+	font-size: 12px;
+	}
+
+.commentlist li .avatar {
+	float: right;
+	padding: 2px;
+	background: #323f5e;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+    	}
+
+.children {
+   	padding: 0;
+   	}
+
+#commentform p {
+	margin: 5px 0;
+    	font-weight: normal;
+	line-height: 14px;
+	text-transform: none;
+    	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+    	font-weight: normal;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 12px;
+	}
+
+.thread-alt {
+	border-top: 1px solid #f8d89b;
+	border-bottom: 1px solid #f8d89b;
+	border-left: none;
+	border-right: none;
+    	}
+
+.thread-even {
+	border-top: 1px solid #f8d89b;
+	border-bottom: 1px solid #f8d89b;
+	border-left: none;
+	border-right: none;
+    	}
+
+
+/*=======================================================================
+	Footer
+=========================================================================*/
+
+#footer {
+	background: url(images/footer.jpg) bottom no-repeat;
+	margin: 0 auto;
+   	width: 1000px;
+	padding-top:10px;
+	height: 40px;
+	clear: both;
+    	text-align: center;
+	font-weight: normal;
+	color: #f7ede1;
+	font-size: 14px;
+	font-stretch: ultra-condensed;
+	font-style: oblique;
+	}
+
+#footer a, #footer a:hover, #footer a:visited {
+  	color: #ffc582;
+	}
+
+
+/*===============================================================
+    Begin Images
+=================================================================*/
+
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+  display: block;
+   	float: right;
+   	}
+
+.alignleft {
+    display: block;
+   	float: left;
+	}
+
+a img {
+	border: none;
+	}
+
+
+/*=================================================================
+    Captions
+===================================================================*/
+
+.aligncenter, div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+	}
+
+#header {
+  background-image:url(images/header.jpg); 
+} 
+
+#footer {
+  background-image:url(images/footer.jpg); 
+ }
+ 
+#menu li {
+ display: inline;
+ color: white;
+ margin-left: 10px;
+ }
+ 
+ .left {
+  float: left;
+  width: 50%;
+ }
+ 
+  .right {
+  float: right;
+  width: 50%;
+ }
+ 
+/*
+ #enluminure {
+   background-image:url(images/knight.jpg);
+ }*/
+
+#connect {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 15px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 200px;
+}

@@ -1,0 +1,52 @@
+span.initialcap {
+	background: url(images/letter.gif) bottom no-repeat;
+    	}
+
+.feed {
+	background: url(images/rss.gif) top left no-repeat;
+	width: 250px;
+	float: left;
+	}
+
+#content {
+	position: relative;
+	top: 0px;
+	height: 100%;
+	}
+
+.post {
+	width:420px;
+	float: left;
+	padding-left: 30px;
+	padding-right: 10px;
+	margin: 0;
+	text-align: justify;
+	}
+
+.entry {
+	width:410px;
+	float:left;
+	overflow: hidden;
+	}
+
+#sidebar{
+	width: 440px;
+	margin-left: 10px;
+	margin-right: 5px;
+	position: relative;
+	top: 5px;
+	}
+
+#quil { 
+	width: 380px;
+	margin-left:40px;
+	float: left;
+	padding-bottom: 10px;
+	}
+
+#commentform textarea {
+    	background: #f7ede1 url(images/quil.gif) bottom right no-repeat;
+	}
+
+
+
