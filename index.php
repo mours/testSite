@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 <?php include('fonction.php');?>
 
-<?php var_dump($_SESSION)?>
+<?php //var_dump($_SESSION)?>
 <div id='header'>
     <?php require_once('templates/menu.tpl.php'); ?>
 	<h1 style='float: left; margin: 50px;'>Test et blog</h1>
