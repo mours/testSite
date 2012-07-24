@@ -6,6 +6,10 @@
     <?php require_once('templates/menu.tpl.php'); ?>
 	<h1 style='float: left; margin: 50px;'>Test et blog</h1>
 </div>
+
+<?php
+/*
+
 <div id="pbody">
 	<div id="content">
         <?php if(isset($_SESSION['code']) && $_SESSION['code'] == '1') echo 'ok';?>
@@ -34,6 +38,14 @@
 		</div>
 	</div>
 </div>
-<div id='footer'></div>
+<div id='footer'></div>*/
 
+
+?>
+<section>
+    <div>
+        <h2>Usage</h2>
+        <p>Canvas consists of a drawable region defined in HTML code with height and width attributes. JavaScript code may access the area through a full set of drawing functions similar to other common 2D APIs, thus allowing for dynamically generated graphics. Some anticipated uses of canvas include building graphs, animations, games, and image composition.</p>
+    </div>
+</section>
 <?php include('footer.php'); ?>
