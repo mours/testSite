@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Mon beau livre</title>
    <!-- <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />-->
     <link rel="stylesheet" href="css/flip.css" type="text/css" media="screen" />
@@ -14,7 +15,3 @@
 </head>
 <?php session_start(); ?>
 <body>
-<img id="myPage" src="css/images/leftPage.jpg" width="466px" height="652px" style="display:none;"/>
-<div id="book">
-    <canvas id="pageflip-canvas"></canvas>
-    <div id="pages">
