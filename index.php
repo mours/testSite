@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php //include('header.php'); ?>
 <?php include('fonction.php');?>
 
 <?php //var_dump($_SESSION)?>
