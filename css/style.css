@@ -18,7 +18,7 @@ Tags: brown, 3 columns, fixed width, widget ready.
 ==============================================================*/
 
 body {
-	background: #3d1402;
+	background: #2B1915;
 	width:100%;
   	font-size: 16px;
 	font-family: 'Palatino Linotype', Georgia, Verdana, Arial, Sans-Serif;
@@ -817,14 +817,13 @@ a img {
 	margin: 0;
 	}
 
-#header {
-  background-image:url(images/header.jpg); 
-} 
+#menu {
+    width: 981px;
+    text-align: center;
+    margin: 0 auto;
+    left: -60px;
+}
 
-#footer {
-  background-image:url(images/footer.jpg); 
- }
- 
 #menu li {
  display: inline;
  color: white;
@@ -841,10 +840,10 @@ a img {
   width: 50%;
  }
  
-/*
- #enluminure {
-   background-image:url(images/knight.jpg);
- }*/
+#book {
+  margin: 0 auto;
+  position: relative;
+}
 
 #connect {
   border: 1px solid #ccc;
