@@ -1,0 +1,8 @@
+Licenses
+
+* flip page algorithm:
+    - from: http://www.netmagazine.com/tutorials/create-page-flip-effect-html5-canvas
+    - license: no license, assumed in public domain
+* flip page book images:
+    - from: http://www.sxc.hu/photo/1366313
+    - license: royalty free (see sxc.hu.txt)

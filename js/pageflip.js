@@ -5,12 +5,16 @@
     // Dimensions of the whole book
     var myBook = document.getElementById( "book" );
 
-    var BOOK_WIDTH = 981;
-    var BOOK_HEIGHT = 683;
+    var BOOK_WIDTH = 862;
+    var BOOK_HEIGHT = 680;
 
     // Dimensions of one page in the book
-    var PAGE_WIDTH = 466;
-    var PAGE_HEIGHT = 652;
+    var PAGE_WIDTH = 432;
+    var PAGE_HEIGHT = 680;
+
+    // Dimensions of left page in the book
+    var LEFT_PAGE_WIDTH = 428;
+    var LEFT_PAGE_HEIGHT = 674;
 
     // Vertical spacing between the top edge of the book and the papers
     var PAGE_Y = ( BOOK_HEIGHT - PAGE_HEIGHT ) / 2;
@@ -188,7 +192,7 @@
 
         // page image.
         var img=document.getElementById( "myPage" );
-        context.drawImage( img, 0, 0, foldWidth, PAGE_HEIGHT, PAGE_WIDTH - 2 * foldWidth, 0, foldWidth, PAGE_HEIGHT );
+        context.drawImage( img, 0, 0, Math.min( foldWidth, LEFT_PAGE_WIDTH ), LEFT_PAGE_HEIGHT, PAGE_WIDTH - 2 * foldWidth, 0, foldWidth, PAGE_HEIGHT );
 
         // Gradient applied to the folded paper (highlights & shadows)
         var foldGradient = context.createLinearGradient(foldX - paperShadowWidth, 0, foldX, 0);
