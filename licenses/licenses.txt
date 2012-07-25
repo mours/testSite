@@ -6,3 +6,6 @@ Licenses
 * flip page book images:
     - from: http://www.sxc.hu/photo/1366313
     - license: royalty free (see sxc.hu.txt)
+* first letter emphasis:
+    - from: http://www.freewordpresstheme.info/theme/medieval-book.html
+    - license: free (see MedievalBook.txt)

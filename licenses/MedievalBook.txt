@@ -1,0 +1,18 @@
+This Wordpress theme is not just any other theme. Carefully built in the spirit of the medieval Illuminated Manuscripts, the theme truly resembles an ancient book.
+
+The header's position was moved above the sidebar to reinforce the book look-a-like of the "Medieval Book" theme. The image used in the header is a reproduction of a medieval image named "Cleric, Knight and Workman" representing the three classes.
+This image was originally published/produced in France, late 13th century.
+
+Combining old with new, Medieval Book uses an automated function and a bit of CSS to embelish the first letter of every post, turning it into an illuminated letter.
+
+Other features:
+
+3 columns
+widget ready
+rss ready
+a very, very unique design
+working in all major browsers (even in the very medieval IE6)
+encrypted footers
+submission to 100 sites
+
+License: Free to use, must keep footer AS IS.
