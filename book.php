@@ -6,7 +6,7 @@
         <section>
             <div>
                 <h2>Usage</h2>
-                <p>Canvas consists of a drawable region defined in HTML code with height and width attributes. JavaScript code may access the area through a full set of drawing functions similar to other common 2D APIs, thus allowing for dynamically generated graphics. Some anticipated uses of canvas include building graphs, animations, games, and image composition.</p>
+                <p><?php echo wpguy_initial_cap('Canvas consists of a drawable region defined in HTML code with height and width attributes. JavaScript code may access the area through a full set of drawing functions similar to other common 2D APIs, thus allowing for dynamically generated graphics. Some anticipated uses of canvas include building graphs, animations, games, and image composition.'); ?></p>
             </div>
         </section>
         <section>
