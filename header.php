@@ -3,8 +3,8 @@
 <head profile="http://gmpg.org/xfn/11">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Mon beau livre</title>
-   <!-- <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />-->
     <link rel="stylesheet" href="css/flip.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
     <!--[if lte IE 6]>
     <link href="css/ie6.css" rel="stylesheet" type="text/css" />
     <![endif]-->
