@@ -13,14 +13,17 @@
     var PAGE_HEIGHT = 680;
 
     // Dimensions of left page in the book
-    var LEFT_PAGE_WIDTH = 428;
-    var LEFT_PAGE_HEIGHT = 674;
+    var LEFT_PAGE_WIDTH_1  = 25;
+    var LEFT_PAGE_HEIGHT_1 = 674;
+
+    var LEFT_PAGE_WIDTH_2  = 404;
+    var LEFT_PAGE_HEIGHT_2 = 671;
 
     // Vertical spacing between the top edge of the book and the papers
     var PAGE_Y = ( BOOK_HEIGHT - PAGE_HEIGHT ) / 2;
 
     // The canvas size equals to the book dimensions + this padding
-    var CANVAS_PADDING = 60;
+    var CANVAS_PADDING = 0;
 
     var page = 0;
 
@@ -162,7 +165,6 @@
         context.lineTo(foldX - foldWidth, PAGE_HEIGHT + (verticalOutdent * 0.5));
         context.stroke();
 
-
         // Right side drop shadow
         var rightShadowGradient = context.createLinearGradient(foldX, 0, foldX + rightShadowWidth, 0);
         rightShadowGradient.addColorStop(0, 'rgba(0,0,0,'+(strength*0.2)+')');
@@ -191,8 +193,18 @@
         context.fill();
 
         // page image.
-        var img=document.getElementById( "myPage" );
-        context.drawImage( img, 0, 0, Math.min( foldWidth, LEFT_PAGE_WIDTH ), LEFT_PAGE_HEIGHT, PAGE_WIDTH - 2 * foldWidth, 0, foldWidth, PAGE_HEIGHT );
+        var dx = 5;
+        var img1=document.getElementById( "myPage1" );
+        if ( foldWidth > dx )
+        {
+            context.drawImage( img1, 0, 0, Math.min( foldWidth, LEFT_PAGE_WIDTH_1 ), LEFT_PAGE_HEIGHT_1, PAGE_WIDTH - 2 * foldWidth, 1, Math.min( LEFT_PAGE_WIDTH_1, foldWidth) , LEFT_PAGE_HEIGHT_1 );
+        }
+
+        var img2=document.getElementById( "myPage2" );
+        if ( foldWidth > LEFT_PAGE_WIDTH_1 )
+        {
+            context.drawImage( img2, 0, 0, Math.min( foldWidth - LEFT_PAGE_WIDTH_1, LEFT_PAGE_WIDTH_2 ), LEFT_PAGE_HEIGHT_2, PAGE_WIDTH - 2 * foldWidth + LEFT_PAGE_WIDTH_1, 4, foldWidth - LEFT_PAGE_WIDTH_1, LEFT_PAGE_HEIGHT_2 );
+        }
 
         // Gradient applied to the folded paper (highlights & shadows)
         var foldGradient = context.createLinearGradient(foldX - paperShadowWidth, 0, foldX, 0);
