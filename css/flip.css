@@ -12,8 +12,8 @@ body {
 #book {
 	background: url("images/mybook.jpg") no-repeat;
 	position: absolute;
-	width: 981px;
-	height: 683px;
+	width: 862px;
+	height: 680px;
 	left: 10px;
 	top: 10px;
 	margin-left: 0px;/*-400px;*/
@@ -21,13 +21,13 @@ body {
 }
 
 #pages section {
-	background: url("images/mypage.png") no-repeat;
+	background: url("images/rightPage.jpg") no-repeat;
 	display: block;
-	width: 466px;
-	height: 652px;
+	width: 432px;
+	height: 680px;
 	position: absolute;
-	left: 490px; /*415px;*/
-	top: 15px; /*5px;*/
+	left: 430px; /*415px;*/
+	top: 0px; /*5px;*/
 	overflow: hidden;
 }
 	#pages section>div {
