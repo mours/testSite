@@ -165,7 +165,6 @@
         context.lineTo(foldX - foldWidth, PAGE_HEIGHT + (verticalOutdent * 0.5));
         context.stroke();
 
-
         // Right side drop shadow
         var rightShadowGradient = context.createLinearGradient(foldX, 0, foldX + rightShadowWidth, 0);
         rightShadowGradient.addColorStop(0, 'rgba(0,0,0,'+(strength*0.2)+')');
@@ -206,7 +205,6 @@
         {
             context.drawImage( img2, 0, 0, Math.min( foldWidth - LEFT_PAGE_WIDTH_1, LEFT_PAGE_WIDTH_2 ), LEFT_PAGE_HEIGHT_2, PAGE_WIDTH - 2 * foldWidth + LEFT_PAGE_WIDTH_1, 4, foldWidth - LEFT_PAGE_WIDTH_1, LEFT_PAGE_HEIGHT_2 );
         }
-
 
         // Gradient applied to the folded paper (highlights & shadows)
         var foldGradient = context.createLinearGradient(foldX - paperShadowWidth, 0, foldX, 0);

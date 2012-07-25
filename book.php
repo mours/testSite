@@ -1,4 +1,3 @@
-<img id="myPage" src="css/images/leftPage.jpg" width="428px" height="674px" style="display:none;"/>
 <img id="myPage1" src="css/images/leftPage1.png" width="25px" height="674px" style="display:none;"/>
 <img id="myPage2" src="css/images/leftPage2.jpg" width="404px" height="671px" style="display:none;"/>
 <div id="book">
