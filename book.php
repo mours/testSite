@@ -6,13 +6,24 @@
         <?php
         $pages = Book::getAllPages();
         foreach($pages as $page): ?>
-        <section>
+        <section class='pageSection' id="page_<?php echo $page->getId(); ?>">
             <div>
+                <?php include('templates/edit.tpl.php'); ?>
                 <?php if($page->getTitre()) : ?>
-                    <h2><?php echo $page->getTitre(); ?></h2>
+                <h2>
+                  <?php echo $page->getTitre(); ?>
+                </h2>
                 <?php endif; ?>
-                <p><?php echo wpguy_initial_cap('Canvas consists of a drawable region defined in HTML code with height and width attributes. JavaScript code may access the area through a full set of drawing functions similar to other common 2D APIs, thus allowing for dynamically generated graphics. Some anticipated uses of canvas include building graphs, animations, games, and image composition.'); ?></p>
+                <p>
+                    <?php echo /*wpguy_initial_cap(*/$page->getContent(); ?>
+                </p>
             </div>
         </section>
         <?php endforeach; ?>
+        <section>
+            <div>
+                <h2>Contact</h2>
+                <?php include('access.php'); ?>
+            </div>
+        </section>
         <script type="text/javascript" src="js/pageflip.js"></script>

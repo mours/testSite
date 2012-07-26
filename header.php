@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Mon beau livre</title>
     <link rel="stylesheet" href="css/flip.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/tinymce.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
     <!--[if lte IE 6]>
     <link href="css/ie6.css" rel="stylesheet" type="text/css" />
@@ -12,6 +13,8 @@
     <link href="css/ie7.css" rel="stylesheet" type="text/css" />
     <![endif]-->
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/tiny_mce/tiny_mce.js"></script>
+    <script type="text/javascript" src="js/tiny_mce/langs/en.js"></script>
 </head>
 <?php session_start(); ?>
 <body>

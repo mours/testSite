@@ -1,13 +1,13 @@
 <script type="text/javascript">
   $(document).ready(function(){
-      $('.edit').live('click', function(){
+     /* $('.edit').live('click', function(){
           $('#menu li').each(function(index){
           {
             val = $(this).text();
             href = $(this).parent().attr('href');
             $(this).parent().parent().html('Nom de l\'onglet : <input type="text" id="nom_'+index+'" value="'+val+'"/><br />Lien : <input type="text" id="url_'+index+'" value="'+href+'" />');
           }})
-      })
+      })*/
   })
 </script>
 
