@@ -853,15 +853,3 @@ a img {
   margin: 0 auto;
   margin-top: 200px;
 }
-
-.edit {
-  float: right;
-  width: 50px;
-  background-color: #B9D1EA ;
-  color: black;
-  border: 1px solid #ccc;
-}
-
-.edit:hover {
- cursor: pointer;
-}
