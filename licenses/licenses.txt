@@ -12,3 +12,9 @@ Licenses
 * javascript WYSIWYG TinyMCE editor:
     - from: http://www.tinymce.com/
     - license: LGPL (see tinymce.txt)
+* Cassini map extract:
+    - from: Gallica in Carte générale de la France. 120, [Valence. Nouv. éd.]. N°120 / [établie sous la direction de César-François Cassini de Thury]
+    - license: extract from public domain content
+* Google Maps extract:
+    - from: Google Maps
+    - license: extract
