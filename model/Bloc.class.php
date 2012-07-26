@@ -2,6 +2,7 @@
 
 class Bloc {
 
+    protected $texte;
+    protected $image;
     protected $titre;
-    protected $description;
 }
