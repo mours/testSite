@@ -15,6 +15,18 @@
                 <p>Some anticipated uses of canvas include building graphs, animations, games, and image composition.</p>
             </div>
         </section>
+        <section>
+            <div>
+                <h2>Plan d'accès</h2>
+                <?php include('access.php'); ?>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Mentions</h2>
+                <p>Some anticipated uses of canvas include building graphs, animations, games, and image composition.</p>
+            </div>
+        </section>
         <script type="text/javascript" src="js/pageflip.js"></script>
     </div>
     </canvas>

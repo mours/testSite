@@ -43,4 +43,5 @@
 
 ?>
 <?php include('book.php'); ?>
+<br>
 <?php include('footer.php'); ?>
