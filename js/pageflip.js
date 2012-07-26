@@ -101,10 +101,12 @@
     }
 
     function mouseUpHandler( event ) {
-        canvas.width = 0;
+
+        var allNoFlip = true;
         for( var i = 0; i < flips.length; i++ ) {
             // If this flip was being dragged we animate to its destination
             if( flips[i].dragging ) {
+                allNoFlip = false;
                 // Figure out which page we should go to next depending on the flip direction
                 if( mouse.x < 0 ) {
                     flips[i].target = -1;
@@ -118,6 +120,8 @@
 
             flips[i].dragging = false;
         }
+        if ( allNoFlip )
+            canvas.width = 0;
     }
 
     function render() {
