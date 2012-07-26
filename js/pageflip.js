@@ -36,6 +36,12 @@
 
     var book = document.getElementById( "book" );
 
+    // top position of book.
+    for (var lx=0, ly= 0, el=book;
+         el != null;
+         lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+    var BOOK_POSITION_TOP = ly;
+
     // List of all the page elements in the DOM
     var pages = book.getElementsByTagName( "section" );
 
@@ -73,11 +79,12 @@
     function mouseMoveHandler( event ) {
         // Offset mouse position so that the top of the spine is 0,0
         mouse.x = event.clientX - book.offsetLeft - ( BOOK_WIDTH / 2 );
-        mouse.y = event.clientY - book.offsetTop;
+        //mouse.y = event.clientY - book.offsetTop;
+        mouse.y = event.clientY + document.body.scrollTop + document.documentElement.scrollTop;
     }
 
     function mouseDownHandler( event ) {
-        if (Math.abs(mouse.x) < PAGE_WIDTH) {
+        if (Math.abs(mouse.x) < PAGE_WIDTH && mouse.y > BOOK_POSITION_TOP && mouse.y < BOOK_POSITION_TOP + BOOK_HEIGHT ) {
             if (mouse.x < 0 && page - 1 >= 0) {
                 flips[page - 1].dragging = true;
             }

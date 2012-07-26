@@ -16,3 +16,7 @@
             </div>
         </section>
         <script type="text/javascript" src="js/pageflip.js"></script>
+    </div>
+    </canvas>
+</div>
+
