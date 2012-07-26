@@ -78,6 +78,7 @@
     book.addEventListener( "mousemove", mouseMoveHandler, true );
     book.addEventListener( "mousedown", mouseDownHandler, true );
     book.addEventListener( "mouseup", mouseUpHandler, true );
+    document.addEventListener( "mouseup", mouseUpHandler, true );
 
     function mouseMoveHandler( event ) {
         // Offset mouse position so that the top of the spine is 0,0

@@ -9,3 +9,6 @@ Licenses
 * first letter emphasis:
     - from: http://www.freewordpresstheme.info/theme/medieval-book.html
     - license: free (see MedievalBook.txt)
+* javascript WYSIWYG TinyMCE editor:
+    - from: http://www.tinymce.com/
+    - license: LGPL (see tinymce.txt)
