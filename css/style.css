@@ -226,7 +226,7 @@ select {
 
 
 #header {
-	background: url(images/header.jpg) bottom no-repeat;
+	background: url("") bottom no-repeat;
 	margin-left:auto;
 	margin-right: auto;
 	padding: 0;

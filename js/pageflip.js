@@ -19,6 +19,9 @@
     var LEFT_PAGE_WIDTH_2  = 404;
     var LEFT_PAGE_HEIGHT_2 = 671;
 
+    // flip margin
+    var FLIP_MARGIN = 60;
+
     // Vertical spacing between the top edge of the book and the papers
     var PAGE_Y = ( BOOK_HEIGHT - PAGE_HEIGHT ) / 2;
 
@@ -62,7 +65,7 @@
     }
 
     // Resize the canvas to match the book size
-    canvas.width = BOOK_WIDTH + ( CANVAS_PADDING * 2 );
+    canvas.width = 0; //BOOK_WIDTH + ( CANVAS_PADDING * 2 );
     canvas.height = BOOK_HEIGHT + ( CANVAS_PADDING * 2 );
 
     // Offset the canvas so that it's padding is evenly spread around the book
@@ -72,19 +75,19 @@
     // Render the page flip 60 times a second
     setInterval( render, 1000 / 60 );
 
-    document.addEventListener( "mousemove", mouseMoveHandler, false );
-    document.addEventListener( "mousedown", mouseDownHandler, false );
-    document.addEventListener( "mouseup", mouseUpHandler, false );
+    book.addEventListener( "mousemove", mouseMoveHandler, true );
+    book.addEventListener( "mousedown", mouseDownHandler, true );
+    book.addEventListener( "mouseup", mouseUpHandler, true );
 
     function mouseMoveHandler( event ) {
         // Offset mouse position so that the top of the spine is 0,0
         mouse.x = event.clientX - book.offsetLeft - ( BOOK_WIDTH / 2 );
         //mouse.y = event.clientY - book.offsetTop;
-        mouse.y = event.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+        //mouse.y = event.clientY + document.body.scrollTop + document.documentElement.scrollTop;
     }
 
     function mouseDownHandler( event ) {
-        if (Math.abs(mouse.x) < PAGE_WIDTH && mouse.y > BOOK_POSITION_TOP && mouse.y < BOOK_POSITION_TOP + BOOK_HEIGHT ) {
+        if (Math.abs(mouse.x) < PAGE_WIDTH && Math.abs(mouse.x) > PAGE_WIDTH - FLIP_MARGIN ){
             if (mouse.x < 0 && page - 1 >= 0) {
                 flips[page - 1].dragging = true;
             }
@@ -98,6 +101,7 @@
     }
 
     function mouseUpHandler( event ) {
+        canvas.width = 0;
         for( var i = 0; i < flips.length; i++ ) {
             // If this flip was being dragged we animate to its destination
             if( flips[i].dragging ) {
@@ -117,8 +121,6 @@
     }
 
     function render() {
-
-        context.clearRect( 0, 0, canvas.width, canvas.height );
 
         for (var i = 0; i < flips.length; i++) {
             var flip = flips[i];
@@ -156,6 +158,9 @@
         var rightShadowWidth = ( PAGE_WIDTH * 0.5 ) * Math.max( Math.min( strength, 0.5 ), 0 );
         var leftShadowWidth = ( PAGE_WIDTH * 0.5 ) * Math.max( Math.min( strength, 0.5 ), 0 );
 
+        // set canvas size & clear it.
+        canvas.width = BOOK_WIDTH + ( CANVAS_PADDING * 2 );
+        context.clearRect( 0, 0, canvas.width, canvas.height );
 
         // Change page element width to match the x position of the fold
         flip.page.style.width = Math.max(foldX, 0) + "px";

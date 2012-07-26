@@ -6,3 +6,10 @@ document.getElementById('click1').onclick = function ( event ){
 document.getElementById('click2').onclick = function ( event ){
     document.getElementById('mymap').src = "./css/images/carte3.jpg";
 }
+
+/*document.getElementById('click1').addEventListener('click', testaa, false);
+
+ function testaa(event)
+ {
+ console.log( "toto" );
+ }*/

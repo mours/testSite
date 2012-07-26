@@ -1,5 +1,5 @@
 <div id="imageMap" style="width: 90%; margin-left: 40px;">
-    <div id="click1" style="position:relative; height: 30px; width: 50%;">
+    <div id="click1" style="position:relative; height: 30px; width: 50%; background-color: #ffffff">
     <p>moderne</p>
     </div>
     <div id="click2" style="position:relative; left: 50%; top: -30px; height: 30px; width: 50%;">
