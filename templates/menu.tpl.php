@@ -11,6 +11,9 @@
   })
 </script>
 
+    <!-- temporary banner -->
+    <img src="css/images/banner.png">
+
 <div id='menu' style='border: 1px solid #ccc;'>
     <span class='edit'>Editer</span>
     <?php
