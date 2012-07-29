@@ -23,11 +23,7 @@
                  type: 'POST',
                  data: {idPrecedent: idPrecedent, newTitre: newTitre, content : contentnewPage},
                  success: function(data){
-                   $('#addPage').html("<img src='css/images/add.png' alt='Ajouter'/><span>Ajouter une page</span>");
-                   $('#addPage').addClass('addPage');
-                   $('#addPage').removeClass('savePage');
-
-                   $("#contentPageAdd").hide();
+                   location.reload();
                  }
               });
           }

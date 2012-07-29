@@ -131,8 +131,7 @@ class Page {
     public static function changeOrdre($nouvelOrdre)
     {
        // On trie les pages par ordre croissant
-       $requete = 'UPDATE page SET ordre = ordre+1 WHERE ordre >= "'.$nouvelOrdre;
-        echo $requete;die;
+       $requete = 'UPDATE page SET ordre = ordre+1 WHERE ordre >= '.$nouvelOrdre;
        mysql_query($requete) or die(mysql_error());
     }
 }
