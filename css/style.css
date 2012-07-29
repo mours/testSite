@@ -878,3 +878,16 @@ a img {
 .edit:hover, .save:hover {
     cursor: pointer;
 }
+
+#addPage {
+  width: 20%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  background-color: #B9B9B9;
+  color: #687582;
+}
+
+#addPage:hover {
+    cursor: pointer;
+}

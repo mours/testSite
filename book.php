@@ -6,17 +6,16 @@
         <?php
         $pages = Book::getAllPages();
         foreach($pages as $page): ?>
-        <section class='pageSection' id="page_<?php echo $page->getId(); ?>">
+            <section class='pageSection' id="<?php echo $page->getId(); ?>_page">
             <div>
                 <?php include('templates/edit.tpl.php'); ?>
                 <?php if($page->getTitre()) : ?>
+
                 <h2>
                   <?php echo $page->getTitre(); ?>
                 </h2>
                 <?php endif; ?>
-                <p>
-                    <?php echo /*wpguy_initial_cap(*/$page->getContent(); ?>
-                </p>
+                <?php echo /*wpguy_initial_cap(*/$page->getContent(); ?>
             </div>
         </section>
         <?php endforeach; ?>

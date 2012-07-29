@@ -7,7 +7,7 @@ class Book {
     */
     public static function getAllPages(){
     Connexion::getInstance();
-    $requete = mysql_query('SELECT * FROM page');
+    $requete = mysql_query('SELECT * FROM page ORDER BY ordre ASC');
     $retour = array();
     $i = 0;
 
