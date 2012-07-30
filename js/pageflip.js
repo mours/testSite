@@ -98,7 +98,7 @@
         }
 
         // Prevents the text selection cursor from appearing when dragging
-        event.preventDefault();
+        // event.preventDefault();
     }
 
     function mouseUpHandler( event ) {
