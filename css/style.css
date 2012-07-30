@@ -867,7 +867,7 @@ a img {
    margin-top: 0px !important;
 }
 
-.edit, .save {
+.edit, .editText, .save, .editMenu {
   float: left;
   background-color: #B9B9B9;
   color: #687582;
@@ -875,7 +875,7 @@ a img {
   padding: 5px;
 }
 
-.edit:hover, .save:hover {
+.edit:hover, .save:hover, .editText:hover, .editMenu:hover {
     cursor: pointer;
 }
 
@@ -889,5 +889,20 @@ a img {
 }
 
 #addPage:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.flashUser {
+  top: 0;
+  text-align: center;
+  padding: 5px;
+  background-color: #FFFF99;
+  width: 100%;
+  opacity:0.8;
+  position: fixed;
+  z-index: 1000;
+}
+
+#menu {
+  color: white;
 }
