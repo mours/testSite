@@ -14,4 +14,6 @@ if(isset($_SESSION['message'])){
 <?php include('templates/add.tpl.php'); ?>
 <?php include('book.php'); ?>
 <br />
+
+
 <?php include('footer.php'); ?>

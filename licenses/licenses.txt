@@ -18,3 +18,6 @@ Licenses
 * Google Maps extract:
     - from: Google Maps
     - license: extract
+* following fonts are freeware & commercial use allowed:
+    - from: fontspace.com
+    - Fantasy Clipart, Tosca, Lancaster, EasyEraldics, EraldicDevices, Libra, The Middle Age I, Heralddic, Gourdie Gothic Deux
