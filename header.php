@@ -15,6 +15,7 @@
     <link href="css/ie7.css" rel="stylesheet" type="text/css" />
     <![endif]-->
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/editAndAdd.js"></script>
     <script type="text/javascript" src="js/tiny_mce/tiny_mce.js"></script>
     <script type="text/javascript" src="js/tiny_mce/langs/en.js"></script>
 </head>

@@ -1,38 +1,3 @@
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.addPage').live('click', function(){
-
-          // Affiche un div pour un titre et un contenu avec textarea, la sauvegarde en bdd puis l'insere en js
-          $('option').last().attr('selected', 'selected');
-          $("#contentPageAdd").show();
-
-          $('#addPage span').html('Sauvegarder');
-          $('#addPage').addClass('savePage');
-          $('#addPage').removeClass('addPage');
-        })
-
-        $('.savePage').live('click',function(){
-          // On sauvegarde en ajax la page puis on l'affiche en js
-          newTitre = $('#newTitre').val();
-          contentnewPage = $('#contentNewPage').val();
-          idPrecedent = $("#idPrecedent").val();
-          if(contentnewPage != "" && idPrecedent != "")
-          {
-              $.ajax({
-                 url: "core/addPage.php",
-                 type: 'POST',
-                 data: {idPrecedent: idPrecedent, newTitre: newTitre, content : contentnewPage},
-                 success: function(data){
-                   location.reload();
-                 }
-              });
-          }
-          else
-            alert('Pour insérer une page, merci de mettre un titre et un contenu');
-        })
-    });
-</script>
-
 <div id='addPage' class='addPage'>
     <img src="css/images/add.png" alt='Ajouter'/>
     <span>Ajouter une page</span>

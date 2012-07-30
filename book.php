@@ -1,5 +1,6 @@
 <img id="myPage1" src="css/images/leftPage1.png" width="25px" height="674px" style="display:none;"/>
 <img id="myPage2" src="css/images/leftPage2.jpg" width="404px" height="671px" style="display:none;"/>
+
 <div id="book">
     <canvas id="pageflip-canvas"></canvas>
     <div id="pages">
@@ -15,7 +16,7 @@
                   <?php echo $page->getTitre(); ?>
                 </h2>
                 <?php endif; ?>
-                <?php echo /*wpguy_initial_cap(*/$page->getContent(); ?>
+                <?php echo wpguy_initial_cap($page->getContent()); ?>
             </div>
         </section>
         <?php endforeach; ?>

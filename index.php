@@ -4,8 +4,11 @@
 <?php include('templates/menu.tpl.php') ?>
 
 <?php
-var_dump($_SESSION);
-if(isset($_SESSION['message'])) echo $_SESSION['message']; ?>
+if(isset($_SESSION['message'])){
+  echo "<div class='flashUser'>".$_SESSION['message']."</div>";
+  unset($_SESSION['message']);
+}
+?>
 
 
 <?php include('templates/add.tpl.php'); ?>
