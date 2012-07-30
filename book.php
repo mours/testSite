@@ -16,7 +16,7 @@
                   <?php echo $page->getTitre(); ?>
                 </h2>
                 <?php endif; ?>
-                <?php echo wpguy_initial_cap($page->getContent()); ?>
+                <?php echo /*wpguy_initial_cap(*/$page->getContent();//); ?>
             </div>
         </section>
         <?php endforeach; ?>
