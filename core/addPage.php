@@ -15,8 +15,9 @@ $page->setContent(secure($newTitre));
 $page->setIdPrecedent($idPrecedent);
 $page->save();
 
-// Ajouter un message pour l'utilisateur 'la page a bien été ajoutée'
+session_start();
 
+// Ajouter un message pour l'utilisateur 'la page a bien été ajoutée'
 $retour['error'] = false;
 $_SESSION['message'] = 'Votre page a bien été ajoutée au livre.';
 
