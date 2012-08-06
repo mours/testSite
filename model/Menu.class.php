@@ -4,15 +4,16 @@ class Menu{
 
     public function getOnglets(){
         Connexion::getInstance();
-        $requete = mysql_query('SELECT name, lien FROM menu');
+        $requete = mysql_query('SELECT name, id_lien, titre FROM menu RIGHT JOIN page ON menu.id_lien = page.id ORDER BY ordre;');
         $retour = array();
         $i = 0;
 
         while($resultat = mysql_fetch_object($requete))
         {
            $retour[$i]['name'] = $resultat->name;
-           $retour[$i]['lien'] = $resultat->lien;
-            $i++;
+           $retour[$i]['lien'] = $resultat->id_lien;
+           $retour[$i]['titre'] = $resultat->titre;
+           $i++;
         }
 
         return $retour;
