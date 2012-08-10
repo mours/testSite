@@ -867,15 +867,16 @@ a img {
    margin-top: 0px !important;
 }
 
-.edit, .editText, .save, .editMenu {
+.edit, .editText, .save, .editMenu, .saveMenu, .deleteLi, .addLi, .annuler  {
   float: left;
   background-color: #B9B9B9;
   color: #687582;
   font-weight: bold;
   padding: 5px;
+  border: 1px solid #ccc;
 }
 
-.edit:hover, .save:hover, .editText:hover, .editMenu:hover {
+.edit:hover, .save:hover, .editText:hover, .saveMenu:hover, .editMenu:hover, .deleteLi:hover, .addLi:hover, .annuler:hover {
     cursor: pointer;
 }
 
@@ -905,4 +906,17 @@ a img {
 
 #menu {
   color: white;
+}
+
+.addMenuButton {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+
+.addMenuButton:hover {
+ cursor: default;
+}
+
+.imgLi:hover {
+ cursor: pointer;
 }
