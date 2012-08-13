@@ -994,6 +994,5 @@ a img {
 }
 
 .b-page-cover{
-  color: white !important;
-  background-color: #804b21 !important;
+  background: url('images/couverture_v3.png') no-repeat  !important;
 }

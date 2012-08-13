@@ -2,8 +2,12 @@ $(document).ready(function()
 {
     $(".inline").colorbox({inline:true, transition:"none", width:"560", height:"700" });
     var tabPages = new Array();
-
     tinyMCE.init({
+        mode : "textareas",
+        height: 500,
+        width: 350
+    });
+    /*tinyMCE.init({
         mode : "textareas",
         height: 500,
         width: 350,
@@ -24,7 +28,7 @@ $(document).ready(function()
         skin : "o2k7",
         skin_variant : "silver"
 
-    });
+    });*/
 
     $('.editText').live('click', function(){
         page = $(this).parent().parent().attr('id');

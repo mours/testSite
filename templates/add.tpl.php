@@ -15,6 +15,7 @@
                 <?php foreach($pages as $page) : ?>
                     <option value='<?php echo $page->getId(); ?>'><?php echo $page->getTitre(); ?></option>
                 <?php endforeach; ?>
+                <option value='null'>Aucune</option>
             </select>
         </div><br/>
         <div>Contenu de la page<br /><textarea name="contentNewPage" id="contentNewPage"></textarea></div>
