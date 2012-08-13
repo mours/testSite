@@ -128,6 +128,25 @@ class Page {
       return null;
     }
 
+    public static function getAllPages()
+    {
+       Connexion::getInstance();
+       $requete = mysql_query('SELECT * FROM page ORDER BY ordre asc');
+
+       $tab = array();
+       while($resultat = mysql_fetch_object($requete))
+       {
+          $page = new Page();
+          $page->setTitre($resultat->titre);
+          $page->setContent($resultat->content);
+          $page->setId($resultat->id);
+          $page->setCreatedAt($resultat->created_at);
+          $tab[] = $page;
+       }
+
+       return $tab;
+    }
+
     public static function changeOrdre($nouvelOrdre)
     {
        // On trie les pages par ordre croissant

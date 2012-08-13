@@ -1,29 +1,35 @@
-<img id="myPage1" src="css/images/leftPage1.png" width="25px" height="674px" style="display:none;"/>
-<img id="myPage2" src="css/images/leftPage2.jpg" width="404px" height="671px" style="display:none;"/>
+<script type="text/javascript">
+    $(function() {
+        //single book
+        $('#mybook').booklet({
+            width:  800,
+            height: 675,
+            closed: true,
+            autoCenter: true,
+            covers: true
+        });
+    });
+</script>
 
-<div id="book">
-    <canvas id="pageflip-canvas"></canvas>
-    <div id="pages">
-        <?php
-        $pages = Book::getAllPages();
-        foreach($pages as $page): ?>
-            <section class='pageSection' id="<?php echo $page->getId(); ?>_page">
-            <div>
-                <?php include('templates/edit.tpl.php'); ?>
-                <?php if($page->getTitre()) : ?>
-
-                <h2>
-                  <?php echo $page->getTitre(); ?>
-                </h2>
-                <?php endif; ?>
-                <?php echo /*wpguy_initial_cap(*/$page->getContent();//); ?>
-            </div>
-        </section>
-        <?php endforeach; ?>
-        <section>
-            <div>
-                <h2>Contact</h2>
-                <?php include('access.php'); ?>
-            </div>
-        </section>
-        <script type="text/javascript" src="js/pageflip.js"></script>
+<div id="mybook">
+   <div>Page de couverture</div>
+   <?php
+   $pages = Book::getAllPages();
+   $index = 1;
+   foreach($pages as $page): ?>
+      <div>
+         <?php include('templates/edit.tpl.php'); ?>
+         <?php if($page->getTitre()) : ?>
+            <h3><?php echo $page->getTitre(); ?></h3>
+         <?php endif; ?>
+         <?php echo /*wpguy_initial_cap(*/$page->getContent();//); ?>
+      </div>
+   <?php endforeach; ?>
+   <div>
+     <h3>Contact</h3>
+       <?php include('access.php'); ?>
+   </div>
+   <div>
+       <h3>THE END</h3>
+   </div>
+</div>

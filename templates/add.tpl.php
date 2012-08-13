@@ -1,15 +1,22 @@
-<div id='addPage' class='addPage'>
-    <img src="css/images/add.png" alt='Ajouter'/>
-    <span>Ajouter une page</span>
+<div id="addPageBorder">
+    <div id='addPage' class='addPage'>
+        <img src="css/images/add_v2.png" alt='Ajouter'/>
+        <span><a class='inline savePage' href="#contentPageAdd" title="Sauvegarder">Ajouter une page</a></span>
+        <span class='annulerAddPage'>Annuler</span>
+    </div>
 </div>
 
-<form id="contentPageAdd" style='display: none; color: white; border: 1px solid red;' method="POST">
-    Titre <input type='text' id='newTitre' /><br />
-    Contenu de la page<br /><textarea name="contentNewPage" id="contentNewPage"></textarea>
-    <?php $pages = Book::getAllPages(); ?>
-    Mettre après la page <select id='idPrecedent'>
-        <?php foreach($pages as $page) : ?>
-            <option value='<?php echo $page->getId(); ?>'><?php echo $page->getTitre(); ?></option>
-        <?php endforeach; ?>
-    </select>
-</form>
+<div style='display:none'>
+    <form id="contentPageAdd" style='color: white;' method="POST">
+        <div class='left addPage'>Titre : <br /><input type='text' id='newTitre' /></div>
+        <div class='right addPage'>
+            <?php $pages = Book::getAllPages(); ?>
+            Page suivante : <select id='idPrecedent'>
+                <?php foreach($pages as $page) : ?>
+                    <option value='<?php echo $page->getId(); ?>'><?php echo $page->getTitre(); ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div><br/>
+        <div>Contenu de la page<br /><textarea name="contentNewPage" id="contentNewPage"></textarea></div>
+    </form>
+</div>

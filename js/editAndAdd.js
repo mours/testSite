@@ -1,6 +1,30 @@
 $(document).ready(function()
 {
+    $(".inline").colorbox({inline:true, transition:"none", width:"560", height:"700" });
     var tabPages = new Array();
+
+    tinyMCE.init({
+        mode : "textareas",
+        height: 500,
+        width: 350,
+        theme : "advanced",
+        plugins : "autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste",
+
+        // Theme options
+        theme_advanced_buttons1 : "bold,italic,underline,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect",
+        theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|anchor,image,cleanup,preview,|,forecolor,backcolor",
+        theme_advanced_buttons3 : "fontsizeselect,tablecontrols,hr,|,emotions,iespell,media,advhr,|,ltr,rtl,",
+        theme_advanced_buttons4 : "moveforward,movebackward,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage",
+        theme_advanced_toolbar_location : "top",
+        theme_advanced_toolbar_align : "left",
+        theme_advanced_statusbar_location : "bottom",
+        theme_advanced_resizing : true,
+
+        // Skin options
+        skin : "o2k7",
+        skin_variant : "silver"
+
+    });
 
     $('.editText').live('click', function(){
         page = $(this).parent().parent().attr('id');
@@ -43,22 +67,23 @@ $(document).ready(function()
         });
     })
 
-    $('.addPage').live('click', function(){
-
+    /*$('.addPage').live('click', function(){
         // Affiche un div pour un titre et un contenu avec textarea, la sauvegarde en bdd puis l'insere en js
-        $('option').last().attr('selected', 'selected');
+       /* $('option').last().attr('selected', 'selected');
         $("#contentPageAdd").show();
-
+        $('.annulerAddPage').show();
         $('#addPage span').html('Sauvegarder');
         $('#addPage').addClass('savePage');
         $('#addPage').removeClass('addPage');
-    })
+        $(".group1").colorbox({rel:'group1'});
+    })*/
 
-    $('.savePage').live('click',function(){
+    $('.cboxTitle').live('click',function(){
         // On sauvegarde en ajax la page puis on l'affiche en js
         newTitre = $('#newTitre').val();
-        contentnewPage = $('#contentNewPage').val();
+        contentnewPage = tinyMCE.get('contentNewPage').getContent()
         idPrecedent = $("#idPrecedent").val();
+        console.log('titre : '+newTitre+' et newPage : '+contentnewPage);
         if(contentnewPage != "" && idPrecedent != "")
         {
             $.ajax({
@@ -231,5 +256,8 @@ $(document).ready(function()
 
     $(".annuler").live('click', function(){
       $(location).attr('href','index.php');
+    });
+    $(".annulerAddPage").live('click', function(){
+        $(location).attr('href','index.php');
     });
 });

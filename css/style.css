@@ -83,7 +83,7 @@ h2, h3 {
 
 h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
 	text-decoration: none;
-	color: #804b21; 
+	color: #687582;
 	}
 
 h3 {
@@ -117,14 +117,15 @@ acronym, abbr, span.caps {
     	cursor: help;
 	}
 
-a, h2 a:hover, h3 a:hover {
+h2 , h3 {
 	color: #aa0004;
 	text-decoration: none;
 	}
 
-a:hover {
-	color: #aa0004;
-	text-decoration: underline;
+
+a, a:hover {
+    color: #687582;
+    text-decoration: none;
 	}
 
 acronym, abbr {
@@ -818,10 +819,9 @@ a img {
 	}
 
 #menu {
-    width: 981px;
     text-align: center;
     margin: 0 auto;
-    left: -60px;
+    left: 40%;;
 }
 
 #menu li {
@@ -867,26 +867,43 @@ a img {
    margin-top: 0px !important;
 }
 
-.edit, .editText, .save, .editMenu, .saveMenu, .deleteLi, .addLi, .annuler  {
+.edit, .editText, .save, .editMenu, .saveMenu, .deleteLi, .addLi, .annuler, .annulerAddPage  {
   float: left;
-  background-color: #B9B9B9;
+  background-color: #D2E0EE;
   color: #687582;
   font-weight: bold;
   padding: 5px;
   border: 1px solid #ccc;
+  font-size: 12px;
 }
 
-.edit:hover, .save:hover, .editText:hover, .saveMenu:hover, .editMenu:hover, .deleteLi:hover, .addLi:hover, .annuler:hover {
+.addLi, .deleteLi {
+  float: right;
+}
+
+.addLi {
+  margin-left: 1px;
+}
+
+.edit:hover, .save:hover, .editText:hover, .saveMenu:hover, .editMenu:hover, .deleteLi:hover, .addLi:hover, .annuler:hover, .annulerAddPage:hover {
     cursor: pointer;
 }
 
+.annulerAddPage {
+  display: none;
+}
+
 #addPage {
-  width: 20%;
-  margin: 0 auto;
   border: 1px solid #ccc;
-  margin-top: 10px;
   background-color: #B9B9B9;
   color: #687582;
+  margin-bottom: 0px;
+  background-color: #D2E0EE;
+  color: #687582;
+  font-weight: bold;
+  font-size: 12px;
+  width: 200px;
+  margin: 0 auto;
 }
 
 #addPage:hover {
@@ -906,6 +923,8 @@ a img {
 
 #menu {
   color: white;
+  position: absolute;
+  top: 165px;
 }
 
 .addMenuButton {
@@ -919,4 +938,62 @@ a img {
 
 .imgLi:hover {
  cursor: pointer;
+}
+
+#contentPageAdd {
+  background: url("images/leftPage2.jpg");
+  margin: 0 auto;
+  width: 460px;
+  padding: 5px;
+}
+
+.addPage {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#addPageBorder {
+  width: 680px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+#contentNewPage_tbl {
+  background-color: white;
+}
+
+#cboxTitle {
+  border: 1px solid #B8BABC;
+  width: 90%;
+  padding: 3px;
+  background-color: #D2E0EE;
+  color: #687582;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px #7C7E7F;
+  -moz-box-shadow: 2px 2px 5px #7C7E7F;
+  -webkit-box-shadow: 2px 2px 5px #7C7E7F;
+}
+
+#cboxTitle:hover {
+  cursor: pointer;
+}
+
+/*===========================*/
+/* LIVRE */
+
+.b-wrap-left{
+  background-image: url('images/leftPage2.jpg') !important;
+}
+
+.b-wrap-right{
+    background-image: url('images/rightPage.jpg') !important;
+}
+
+.b-page-cover{
+  color: white !important;
+  background-color: #804b21 !important;
 }
