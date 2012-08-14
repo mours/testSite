@@ -5,17 +5,12 @@ $(document).ready(function()
     tinyMCE.init({
         mode : "textareas",
         height: 500,
-        width: 350
-    });
-    /*tinyMCE.init({
-        mode : "textareas",
-        height: 500,
         width: 350,
         theme : "advanced",
         plugins : "autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste",
 
         // Theme options
-        theme_advanced_buttons1 : "bold,italic,underline,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect",
+        theme_advanced_buttons1 : "reservation, bold,italic,underline,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect",
         theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|anchor,image,cleanup,preview,|,forecolor,backcolor",
         theme_advanced_buttons3 : "fontsizeselect,tablecontrols,hr,|,emotions,iespell,media,advhr,|,ltr,rtl,",
         theme_advanced_buttons4 : "moveforward,movebackward,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage",
@@ -24,11 +19,31 @@ $(document).ready(function()
         theme_advanced_statusbar_location : "bottom",
         theme_advanced_resizing : true,
 
+        setup: function(ed){
+            //Ajouter un bouton
+            ed.addButton('reservation', {
+                title: 'Réservation',
+                image: 'css/images/add.png',
+                onclick: function(){
+                    alert(tinyMCE.get('contentNewPage'));
+                    tinyMCE.get('contentNewPage').setContent('<span>test</span>');
+                    // Fonction executée au clic
+                    /*var sel = ed.getContent();
+                    setTimeout(function(){
+                        pop.document.open();
+                        pop.document.write(sel);
+                        pop.document.close();
+                    }, 500);*/
+
+                }
+            });
+        },
+
         // Skin options
         skin : "o2k7",
         skin_variant : "silver"
 
-    });*/
+    });
 
     $('.editText').live('click', function(){
         page = $(this).parent().parent().attr('id');

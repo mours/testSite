@@ -24,6 +24,6 @@
     <script type="text/javascript" src="js/jquery.colorbox.js"></script>
     <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
     <script src="js/jquery.booklet.1.4.0.js" type="text/javascript"></script>
-
+    <script src="js/reservation.js" type="text/javascript"></script>
 </head>
 <body>

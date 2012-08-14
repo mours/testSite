@@ -821,7 +821,16 @@ a img {
 #menu {
     text-align: center;
     margin: 0 auto;
-    left: 40%;;
+    left: 35%;
+    color: white;
+    position: absolute;
+    top: 180px;
+    width: 400px;
+}
+
+#menu ul {
+  padding-left: 0px;
+  margin-bottom: 20px;
 }
 
 #menu li {
@@ -829,6 +838,10 @@ a img {
  color: white;
  margin-left: 10px;
  }
+
+#menu ul a:hover {
+  cursor: pointer;
+}
  
  .left {
   float: left;
@@ -921,12 +934,6 @@ a img {
   z-index: 1000;
 }
 
-#menu {
-  color: white;
-  position: absolute;
-  top: 165px;
-}
-
 .addMenuButton {
   border: 1px solid #ccc;
   padding: 2px;
@@ -995,4 +1002,8 @@ a img {
 
 .b-page-cover{
   background: url('images/couverture_v3.png') no-repeat  !important;
+}
+
+#mybook{
+  margin-top: 20px !important;
 }

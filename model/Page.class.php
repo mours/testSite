@@ -7,29 +7,34 @@ class Page {
     protected $created_at;
     protected $id;
     protected $ordre;
-    protected $idPrecedent;
+    protected $idSuivant;
 
     public function getTitre()
     {
         return $this->titre;
     }
 
-    public function setIdPrecedent($idPrecedent)
+    public function setIdSuivant($idSuivant)
     {
         Connexion::getInstance();
-        $requete = mysql_query('SELECT ordre FROM page WHERE id='.$idPrecedent);
-
-        while($resultat = mysql_fetch_object($requete))
+        if($idSuivant != "null")
         {
-          $this->setOrdre($resultat->ordre+1);
+          $requete = mysql_query('SELECT ordre FROM page WHERE id='.$idSuivant);
+          while($resultat = mysql_fetch_object($requete))
+             $this->setOrdre($resultat->ordre-1);
+        }
+        else
+        {
+          $ordre = self::getLastPage();
+          $this->setOrdre($ordre+1);
         }
 
-        $this->idPrecedent = $idPrecedent;
+        $this->idSuivant = $idSuivant;
     }
 
-    public function getIdPrecedent()
+    public function getIdSuivant()
     {
-        return $this->idPrecedent;
+        return $this->idSuivant;
     }
 
     public function setTitre($titre)
@@ -110,7 +115,7 @@ class Page {
         }
         else
         {
-            $requete = 'UPDATE page SET titre="'.$this->getTitre().'", content="'.$this->getContent().'", "'.$this->getOrdre().'" WHERE id='.$this->getId();
+            $requete = 'UPDATE page SET titre="'.$this->getTitre().'", content="'.$this->getContent().'", ordre="'.$this->getOrdre().'" WHERE id='.$this->getId();
             mysql_query($requete) or die(mysql_error());
         }
     }

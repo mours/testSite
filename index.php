@@ -4,7 +4,7 @@
 <?php include('templates/menu.tpl.php') ?>
 
 <?php
-if(isset($_SESSION['message'])){
+if(isset($_SESSION['message']) && isset($_SESSION['code']) && $_SESSION['code'] == 1){
   echo "<div class='flashUser'>".$_SESSION['message']."</div>";
   unset($_SESSION['message']);
 }

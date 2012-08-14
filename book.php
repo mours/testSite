@@ -12,16 +12,19 @@
 </script>
 
 <div id="mybook">
-   <div>Page de couverture</div>
+   <div></div>
    <?php
    $pages = Book::getAllPages();
    $index = 1;
    foreach($pages as $page): ?>
-      <div>
-         <?php include('templates/edit.tpl.php'); ?>
+      <div idPage = '<?php echo $page->getId(); ?>'>
+         <?php if(isset($_SESSION['code']) && ($_SESSION['code'] == 1)): ?>
+           <?php include('templates/edit.tpl.php'); ?>
+         <?php endif ?>
          <?php if($page->getTitre()) : ?>
             <h3><?php echo $page->getTitre(); ?></h3>
          <?php endif; ?>
+         <input type='button' class='reserver' value='Réserver' />
          <?php echo /*wpguy_initial_cap(*/$page->getContent();//); ?>
       </div>
    <?php endforeach; ?>
