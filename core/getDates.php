@@ -10,7 +10,10 @@ require_once('../model/Connexion.class.php');
     $data = array();
     foreach($tabCal as $cal)
     {
-      $data[] = $cal->getJour.'/'.$cal->getMois.'/'.$cal->getAnnee();
+       if($cal->getEtat() == 1)
+        $data['ind'][] = $cal->getJour().'/'.$cal->getMois().'/'.$cal->getAnnee();
+       else
+        $data['res'][] = $cal->getJour().'/'.$cal->getMois().'/'.$cal->getAnnee();
     }
     echo json_encode($data);
   }

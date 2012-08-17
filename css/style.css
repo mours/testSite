@@ -1007,3 +1007,28 @@ a img {
 #mybook{
   margin-top: 20px !important;
 }
+
+#tableReservation {
+  width: auto;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  margin-top: 3px;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.login {
+  border: 1px solid #ccc;
+}
+
+.help {
+ font-size: 10px;
+ color: blue;
+ text-align: left;
+}
+
+.errorForm {
+  color: red;
+  font-size: 10px;
+  text-align: left;
+}
